@@ -16,20 +16,22 @@ struct Portalas
 
 struct SutrauktosMelagienos : Portalas
 {
-    int kiekis=1;
+    int kiekis=0;
+    char kategorijos[30][21];
+    int procentai[30][30];
 };
 
 
 
 void Nuskaitymas(int& n, Portalas*& portalai);
 void PatikrinimasDelMelagingosKategorijos(int n, Portalas*& portalai, int& kiekMelaginguKategoriju, Portalas*& melagienuKategorijos);
-void Sutraukimas(int kiekMelaginguKategoriju, Portalas*& melagienuKategorijos, SutrauktosMelagienos*& melagienos);
-void Rikiavimas(int kiekMelaginguKategoriju, SutrauktosMelagienos*& melagienos);
-void Isvedimas(int kiekMelaginguKategoriju, SutrauktosMelagienos*& melagienos);
+void Sutraukimas(int kiekMelaginguKategoriju, Portalas*& melagienuKategorijos, SutrauktosMelagienos*& melagienos, int& kiekMelagienu);
+void Rikiavimas(int kiekMelagienu, SutrauktosMelagienos*& melagienos);
+void Isvedimas(int kiekMelagienu, SutrauktosMelagienos*& melagienos);
 
 int main()
 {
-    int n, kiekMelaginguKategoriju=0;
+    int n, kiekMelaginguKategoriju=0, kiekMelagienu=0;
     Portalas* portalai = nullptr;
     Portalas* melagienuKategorijos = nullptr;
     SutrauktosMelagienos* melagienos = nullptr;
@@ -38,16 +40,11 @@ int main()
     melagienuKategorijos = new Portalas[n];
     PatikrinimasDelMelagingosKategorijos(n, portalai, kiekMelaginguKategoriju, melagienuKategorijos);
     melagienos = new SutrauktosMelagienos[kiekMelaginguKategoriju];
-    cout << kiekMelaginguKategoriju << endl;
-    for(int i=0; i<kiekMelaginguKategoriju; i++)
-    {
-        cout << melagienuKategorijos[i].Pavadinimas << " " << melagienuKategorijos[i].Kategorija << " " << melagienuKategorijos[i].melagienuProcentas << endl;
-    }
 
 
-    Sutraukimas(kiekMelaginguKategoriju, melagienuKategorijos, melagienos);
-    //Rikiavimas(kiekMelaginguKategoriju, melagienos);
-    //Isvedimas(kiekMelaginguKategoriju, melagienos);
+    Sutraukimas(kiekMelaginguKategoriju, melagienuKategorijos, melagienos, kiekMelagienu);
+    //Rikiavimas(kiekMelagienu, melagienos);
+    //Isvedimas(kiekMelagienu, melagienos);
 
 
     delete[] portalai;
@@ -93,26 +90,29 @@ void PatikrinimasDelMelagingosKategorijos(int n, Portalas*& portalai, int& kiekM
     }
 }
 
-void Sutraukimas(int kiekMelaginguKategoriju, Portalas*& melagienuKategorijos, SutrauktosMelagienos*& melagienos)
+void Sutraukimas(int kiekMelaginguKategoriju, Portalas*& melagienuKategorijos, SutrauktosMelagienos*& melagienos, int& kiekMelagienu)
 {
     for(int i=0; i<kiekMelaginguKategoriju-1; i++)
     {
         for(int j=i+1; j<kiekMelaginguKategoriju; j++)
         {
-            if(melagienuKategorijos[i].Pavadinimas==melagienuKategorijos[j].Pavadinimas)
+            if(melagienuKategorijos[i].Pavadinimas!=melagienuKategorijos[j].Pavadinimas)
             {
-                cout << "a" << endl;
+                melagienos[kiekMelagienu].Pavadinimas = melagienuKategorijos[j].Pavadinimas;
+                melagienos[kiekMelagienu].kategorijos[melagienos[kiekMelagienu].kiekis] = melagienuKategorijos[j].Kategorija;
+                melagienos[kiekMelagienu].procentai[melagienos[kiekMelagienu].kiekis++] = melagienuKategorijos[j].melagienuProcentas;
+                kiekMelagienu++;
             }
         }
     }
 }
 
-void Rikiavimas(int kiekMelaginguKategoriju, SutrauktosMelagienos*& melagienos)
+void Rikiavimas(int kiekMelagienu, SutrauktosMelagienos*& melagienos)
 {
-    for(int i=0; i<kiekMelaginguKategoriju-1; i++)
+    for(int i=0; i<kiekMelagienu-1; i++)
     {
         int max=i;
-        for(int j=i+1; j<kiekMelaginguKategoriju; j++)
+        for(int j=i+1; j<kiekMelagienu; j++)
         {
             if(melagienos[j].kiekis>melagienos[max].kiekis || (melagienos[j].kiekis==melagienos[max].kiekis && melagienos[j].Kategorija>melagienos[max].Kategorija))
                 max=j;
@@ -124,7 +124,14 @@ void Rikiavimas(int kiekMelaginguKategoriju, SutrauktosMelagienos*& melagienos)
     }
 }
 
-void Isvedimas(int kiekMelaginguKategoriju, SutrauktosMelagienos*& melagienos)
+void Isvedimas(int kiekMelagienu, SutrauktosMelagienos*& melagienos)
 {
-
+    for(int i=0; i<kiekMelagienu; i++)
+    {
+        cout << melagienos[i].Pavadinimas << " " << melagienos[i].kiekis << endl;
+        for(int j=0; j<melagienos[i].kiekis; j++)
+        {
+            cout << melagienos[i].kategorijos[j] << " " << melagienos[i].procentai[j] << endl;
+        }
+    }
 }
