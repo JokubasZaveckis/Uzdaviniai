@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1639322909 source:c:\users\jokûbas\desktop\papildomi\2019\sportas_gera\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

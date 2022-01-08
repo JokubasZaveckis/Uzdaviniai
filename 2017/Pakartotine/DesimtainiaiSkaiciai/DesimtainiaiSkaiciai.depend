@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1634650226 source:e:\desimtainiaiskaiciai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cmath>
+
+1635087624 source:c:\users\jokûbas\desktop\papildomi\2017\desimtainiaiskaiciai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cmath>
+	<string.h>
+	<stdlib.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1641473536 source:c:\users\jokûbas\desktop\papildomi\2021\pakartotine\savanoryste\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cmath>
+

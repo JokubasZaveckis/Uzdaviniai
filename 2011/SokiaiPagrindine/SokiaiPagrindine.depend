@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1621766465 source:c:\users\jokûbas\desktop\papildomi\2011\sokiaipagrindine\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1638626576 source:c:\users\jokûbas\desktop\papildomi\2018\slidininkai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

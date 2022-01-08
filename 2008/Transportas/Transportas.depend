@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1617375720 source:c:\users\jokûbas\desktop\papildomi\2008\transportas\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

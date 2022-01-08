@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1617892064 source:c:\users\jokûbas\desktop\papildomi\2009\varzybos v2\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	"Programa.h"
+
+1618239332 c:\users\jokûbas\desktop\papildomi\2009\varzybos v2\programa.h
+	"Plaukimas.h"
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+
+1618239152 c:\users\jokûbas\desktop\papildomi\2009\varzybos v2\plaukimas.h
+
+1617892259 source:c:\users\jokûbas\desktop\papildomi\2009\varzybos v2\programa.cpp
+	"Programa.h"
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1639922273 source:c:\users\jokûbas\desktop\papildomi\2020\pakartotine\varzybos\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

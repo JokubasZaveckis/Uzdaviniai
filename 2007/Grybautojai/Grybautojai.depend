@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614957094 source:c:\users\jokûbas\desktop\papildomi\2007\grybautojai\main.cpp
+	<iostream>
+	<fstream>
+

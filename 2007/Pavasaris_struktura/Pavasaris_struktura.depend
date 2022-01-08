@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616340724 source:c:\users\jokûbas\desktop\papildomi\2007\pavasaris_struktura\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

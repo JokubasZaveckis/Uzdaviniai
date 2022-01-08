@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1637003987 source:c:\users\jokûbas\desktop\papildomi\2016\pagrindine\kuprines\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

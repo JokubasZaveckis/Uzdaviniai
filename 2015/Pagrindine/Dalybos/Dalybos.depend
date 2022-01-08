@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1636646993 source:c:\users\jokûbas\desktop\papildomi\2015\pagrindine\dalybos\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

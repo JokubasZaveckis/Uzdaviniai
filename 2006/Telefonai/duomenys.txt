@@ -1,0 +1,6 @@
+5 180
+Vardenis            Pavardenis1                3 20
+Vardenis            Pavardenis2                1 05
+Vardenis            Pavardenis3                2 25
+Vardenis            Pavardenis4                3 45
+Vardenis            Pavardenis5                2 45

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1634974708 source:c:\users\sauletekis\desktop\darbai\kvadratai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cmath>
+
+1635089786 source:c:\users\jokûbas\desktop\papildomi\2017\kvadratai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cmath>
+

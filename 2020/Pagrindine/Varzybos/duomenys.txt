@@ -1,0 +1,21 @@
+4
+Rima Liepa              1
+Ungurys                 456
+Petras A. Petraitis     3
+Lydeka                  526
+Veidrodinis Karpis      250
+Lydeka                  125
+Jonas                   2
+Lydeka                  330
+Kuoja                   100
+Antanas                 4
+Ungurys                 201
+Lydeka                  200
+Veidrodinis Karpis      450
+Kuoja                   150
+5
+Ungurys                 15
+Veidrodinis Karpis      5
+Kuoja                   3
+Karosas                 5
+Lydeka                  15

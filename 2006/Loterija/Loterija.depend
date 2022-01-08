@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1611597954 source:c:\users\jokûbas\desktop\loterija\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cmath>
+

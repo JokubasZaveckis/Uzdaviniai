@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1638469140 source:c:\users\jokûbas\desktop\papildomi\2017\pagrindine\sesioliktainiai_skaiciai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

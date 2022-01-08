@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1633716392 source:c:\users\jokûbas\desktop\papildomi\2015\pakartotine\mokiniai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

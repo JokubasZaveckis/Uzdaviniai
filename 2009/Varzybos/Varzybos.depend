@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1617813177 source:c:\users\jokûbas\desktop\papildomi\2009\varzybos\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

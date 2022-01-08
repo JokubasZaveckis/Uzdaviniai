@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1634280328 source:e:\takai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<string.h>
+
+1634481073 source:c:\users\jokûbas\desktop\papildomi\2016\takai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<string.h>
+

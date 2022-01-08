@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1632067753 source:c:\users\jokûbas\desktop\papildomi\2013\pakartotine\savivaldybes_ir_apskritys\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

@@ -1,0 +1,9 @@
+Dalyviai 
+Petras A. Petraitis  155 20
+Rima Liepa           136 80
+Laimikis 
+Ungurys              136 80
+Lydeka               130 20
+Veidrodinis karpis   25 0
+Karosas              0 0
+Kuoja                0 0

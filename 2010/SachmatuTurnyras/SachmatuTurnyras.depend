@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1619965608 source:c:\users\jokûbas\desktop\papildomi\2010\sachmatuturnyras\main.cpp
+	<iostream>
+	<fstream>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1614355160 source:c:\users\jokûbas\desktop\papildomi\2007\pavasaris2\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

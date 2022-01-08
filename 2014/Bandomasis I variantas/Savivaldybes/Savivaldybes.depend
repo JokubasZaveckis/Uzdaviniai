@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1633269549 source:c:\users\jokûbas\desktop\papildomi\2014\bandomasis i variantas\savivaldybes\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+

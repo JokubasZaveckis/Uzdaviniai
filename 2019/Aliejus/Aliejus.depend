@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1639074891 source:c:\users\jokûbas\desktop\papildomi\2018\aliejus\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+
+1639074891 source:c:\users\jokûbas\desktop\papildomi\2019\aliejus\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

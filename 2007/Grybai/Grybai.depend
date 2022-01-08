@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1616342613 source:c:\users\jokûbas\desktop\papildomi\2007\grybai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<algorithm>
+	"Programa.h"
+
+1616341649 c:\users\jokûbas\desktop\papildomi\2007\grybai\grybavimas.h
+
+1616341724 source:c:\users\jokûbas\desktop\papildomi\2007\grybai\grybavimas.cpp
+	"grybavimas.h"
+
+1616342847 c:\users\jokûbas\desktop\papildomi\2007\grybai\programa.h
+	"grybavimas.h"
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+	<algorithm>
+

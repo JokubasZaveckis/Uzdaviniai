@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1636654732 source:c:\users\jokûbas\desktop\papildomi\2015\pagrindine\avys\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+	<fstream>
+	<string.h>
+

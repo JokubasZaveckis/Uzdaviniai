@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1636392219 source:c:\users\jokûbas\desktop\papildomi\2014\pagrindine\balsavimo_rezultatai\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

@@ -1,0 +1,6 @@
+4 5
+0.2 0.2 0.2 0.2 0.2
+Jonas Jonaitis 10 10 10 10 10
+Petras Pertraitis 8 8 8 8 8
+Antanas Antanaitis 5 5 5 5 5
+Antana2 Antanaiti2 5 5 5 5 5

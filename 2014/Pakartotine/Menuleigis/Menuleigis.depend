@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1633213441 source:c:\users\jokûbas\desktop\papildomi\2014\pakartotine\menuleigis\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+

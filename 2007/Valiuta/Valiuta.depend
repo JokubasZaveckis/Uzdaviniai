@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1614106993 source:c:\users\jokûbas\desktop\papildomi\2007\valiuta\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

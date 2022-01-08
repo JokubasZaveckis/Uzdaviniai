@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1615562962 source:c:\users\jokûbas\desktop\papildomi\2008\metro\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

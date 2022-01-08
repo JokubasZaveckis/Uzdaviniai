@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1610724779 source:c:\users\jokûbas\desktop\papildomi\kontrolinis.darbas\main.cpp
+	<iostream>
+	<fstream>
+	<math.h>
+

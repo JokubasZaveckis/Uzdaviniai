@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1612891380 source:c:\users\jokûbas\desktop\papildomi\elektra\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
