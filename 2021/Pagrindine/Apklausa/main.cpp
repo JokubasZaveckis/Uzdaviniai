@@ -1,9 +1,140 @@
 #include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string.h>
 
 using namespace std;
 
+struct Mokinys
+{
+    string vardas;
+    string megstamiausiaPamoka;
+    int pazymiuSkaicius;
+    int pazymiai[9999];
+    float vidurkis;
+};
+
+struct Pamoka
+{
+    string pavadinimas;
+    int kiekisMokiniu=0;
+    string mokiniai[50];
+    int vidurkiai[50];
+};
+
+void Nuskaitymas(int&m, Mokinys*& mokiniai);
+void VidurkioSkaiciavimas(int m, Mokinys*& mokiniai);
+void PamokuAtrinkimas(int m, Mokinys*& mokiniai, Pamoka*& pamokos, int& kiekPamoku);
+void Rikiavimas(int kiekPamoku, Pamoka*& pamokos);
+void Isvedimas(int kiekPamoku, Pamoka*& pamokos);
+
 int main()
 {
-    cout << "Hello world!" << endl;
+    int m, kiekPamoku=0;
+    Mokinys* mokiniai = nullptr;
+    Pamoka* pamokos = nullptr;
+
+    Nuskaitymas(m, mokiniai);
+    VidurkioSkaiciavimas(m, mokiniai);
+    PamokuAtrinkimas(m, mokiniai, pamokos, kiekPamoku);
+    Rikiavimas(kiekPamoku, pamokos);
+    Isvedimas(kiekPamoku, pamokos);
+
+    delete[] mokiniai;
+    delete[] pamokos;
     return 0;
+}
+
+void Nuskaitymas(int&m, Mokinys*& mokiniai)
+{
+    ifstream duomenys("duomenys.txt");
+    duomenys >> m;
+    mokiniai = new Mokinys[m];
+    for(int i=0; i<m; i++)
+    {
+        duomenys >> mokiniai[i].vardas >> mokiniai[i].megstamiausiaPamoka;
+        duomenys >> mokiniai[i].pazymiuSkaicius;
+        for(int j=0; j<mokiniai[i].pazymiuSkaicius; j++)
+        {
+            duomenys >> mokiniai[i].pazymiai[j];
+        }
+    }
+    duomenys.close();
+}
+
+void VidurkioSkaiciavimas(int m, Mokinys*& mokiniai)
+{
+    for(int i=0; i<m; i++)
+    {
+        int suma=0;
+        for(int j=0; j<mokiniai[i].pazymiuSkaicius; j++)
+        {
+            suma+=mokiniai[i].pazymiai[j];
+        }
+        mokiniai[i].vidurkis=suma*1.0/mokiniai[i].pazymiuSkaicius;
+    }
+}
+
+void PamokuAtrinkimas(int m, Mokinys*& mokiniai, Pamoka*& pamokos, int& kiekPamoku)
+{
+    pamokos = new Pamoka[m];
+
+    pamokos[kiekPamoku].pavadinimas = mokiniai[0].megstamiausiaPamoka;
+    pamokos[kiekPamoku].mokiniai[pamokos[kiekPamoku].kiekisMokiniu] = mokiniai[0].vardas;
+    pamokos[kiekPamoku].vidurkiai[pamokos[kiekPamoku].kiekisMokiniu++] = mokiniai[0].vidurkis;
+    kiekPamoku++;
+    for(int i=0; i<m; i++)
+    {
+        bool rasta=false;
+        for(int j=0; j<kiekPamoku; j++)
+        {
+            if(mokiniai[i].megstamiausiaPamoka==mokiniai[j].megstamiausiaPamoka)
+            {
+                rasta=true;
+                pamokos[j].mokiniai[pamokos[j].kiekisMokiniu] = mokiniai[i].vardas;
+                pamokos[j].vidurkiai[pamokos[j].kiekisMokiniu++] = mokiniai[i].vidurkis;
+            }
+        }
+        if(rasta==false)
+        {
+            pamokos[kiekPamoku].pavadinimas = pamokos[i].pavadinimas;
+            pamokos[kiekPamoku].mokiniai[pamokos[kiekPamoku].kiekisMokiniu] = mokiniai[i].vardas;
+            pamokos[kiekPamoku].vidurkiai[pamokos[kiekPamoku].kiekisMokiniu++] = mokiniai[i].vidurkis;
+            kiekPamoku++;
+        }
+    }
+}
+
+void Rikiavimas(int kiekPamoku, Pamoka*& pamokos)
+{
+    for(int i=0; i<kiekPamoku-1; i++)
+    {
+        int max=i;
+        for(int j=i+1; j<kiekPamoku; j++)
+        {
+            if(pamokos[j].kiekisMokiniu>pamokos[max].kiekisMokiniu || (pamokos[j].kiekisMokiniu==pamokos[max].kiekisMokiniu && pamokos[j].pavadinimas>pamokos[max].pavadinimas))
+            {
+                max=j;
+            }
+        }
+        if(max!=i)
+        {
+            swap(pamokos[i], pamokos[max]);
+        }
+    }
+}
+
+void Isvedimas(int kiekPamoku, Pamoka*& pamokos)
+{
+    for(int i=0; i<kiekPamoku; i++)
+    {
+        cout << pamokos[i].pavadinimas << " " << pamokos[i].kiekisMokiniu << endl;
+        for(int j=0; j<pamokos[i].kiekisMokiniu; j++)
+        {
+            if(pamokos[i].vidurkiai[j]>=9)
+            {
+                cout << pamokos[j].mokiniai << endl;
+            }
+        }
+    }
 }
