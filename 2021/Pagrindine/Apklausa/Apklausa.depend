@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1642279605 source:c:\users\jokûbas\documents\github\uzdaviniai\2021\pagrindine\apklausa\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string.h>
+
