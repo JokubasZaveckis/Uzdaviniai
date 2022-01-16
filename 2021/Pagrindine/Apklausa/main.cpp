@@ -168,4 +168,30 @@ void Isvedimas(int kiekPamoku, Pamoka*& pamokos)
     {
         cout << "Neatitika vidurkis " << endl;
     }
+
+    ofstream rezultatai("rezultatai.txt");
+    int suma=0;
+    for(int i=0; i<kiekPamoku; i++)
+    {
+        if(pamokos[i].kiekVirs9>0)
+        {
+            rezultatai << pamokos[i].pavadinimas << " " << pamokos[i].kiekVirs9 << endl;
+            for(int j=0; j<pamokos[i].kiekisMokiniu; j++)
+            {
+                if(pamokos[i].vidurkiai[j]>=9)
+                {
+                    rezultatai << pamokos[i].mokiniai[j] << endl;
+                }
+            }
+        }
+    }
+    for(int j=0; j<kiekPamoku; j++)
+    {
+        suma+=pamokos[j].kiekVirs9;
+    }
+    if(suma==0)
+    {
+        rezultatai << "Neatitika vidurkis " << endl;
+    }
+    rezultatai.close();
 }
